@@ -263,7 +263,7 @@ ul li:hover {
 #arkaplanlar {
     margin:auto;
     height: fit-content;
-    width:80vw;
+    width:400px;
     padding: 5px;
     display: flex;
     flex-direction: row;
