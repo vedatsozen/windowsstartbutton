@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="startbutton" class="start" type="button">Start</button>
+    <div id="date"></div>
+
+<div id="menu">
+    <ul>
+        <li>Documents</li>
+        <li id="changewallpaper">Change Wallpaper</li>
+        <li id="photos">Photos</li>
+        <li>Settings</li>
+        <li>Shut Down</li>
+    </ul>
+</div>
+
+<!-- ARKAPLANLAR-->
+
+<div id="arkaplanlar">
+
+<img id="arkaplan1" src="1.jpg">
+<img id="arkaplan2" src="2.jpg">
+<img id="arkaplan3" src="3.jpg">
+<img id="arkaplan4" src="4.jpg">
+<img id="arkaplan5" src="5.jpg">
+
+
+</div>
+
+<button id="closeme" type="button">CLOSE WALLPAPERS</button>
+
+</body>
+
+<script>
+
+const startbutton = document.getElementById("startbutton") ;
+
+startbutton.addEventListener("click", startmenu)
+
+function startmenu() {
+
+document.getElementById("menu").classList.toggle("movemenu");
+
+}
+
+const date = new Date();
+const hour = date.getHours();
+const minute = date.getMinutes()
+
+document.getElementById("date").innerHTML = hour + ":" + minute ;
+
+const changeWallpaper = document.getElementById("changewallpaper");
+
+changeWallpaper.addEventListener("click", function() {
+
+document.getElementById("arkaplanlar").style.visibility = "visible";
+document.getElementById("closeme").style.visibility = "visible";
+
+});
+
+document.body.style.backgroundImage = "url('arkaplan.jpg')";
+
+const arkaplan1 = document.getElementById("arkaplan1");
+
+arkaplan1.addEventListener("click", function() {
+
+document.body.style.backgroundImage = "url('1.jpg')";
+
+});
+
+const arkaplan2 = document.getElementById("arkaplan2");
+
+arkaplan2.addEventListener("click", function() {
+
+document.body.style.backgroundImage = "url('2.jpg')";
+
+});
+
+const arkaplan3 = document.getElementById("arkaplan3");
+
+arkaplan3.addEventListener("click", function() {
+
+document.body.style.backgroundImage = "url('3.jpg')";
+
+});
+
+const arkaplan4 = document.getElementById("arkaplan4");
+
+arkaplan4.addEventListener("click", function() {
+
+document.body.style.backgroundImage = "url('4.jpg')";
+
+});
+
+const arkaplan5 = document.getElementById("arkaplan5");
+
+arkaplan5.addEventListener("click", function() {
+
+document.body.style.backgroundImage = "url('5.jpg')";
+
+});
+
+document.getElementById("closeme").addEventListener("click", function() {
+
+document.getElementById("closeme").style.visibility = "hidden";
+document.getElementById("arkaplanlar").style.visibility = "hidden";
+
+});
+
+</script>
+</html>
